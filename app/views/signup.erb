@@ -1,0 +1,47 @@
+<% @title="Coffeed - Signup" %>
+
+<ul class="errors">
+    <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+</ul>
+
+<form method="POST" action="/signup" style="margin-left: 1.0em;">
+
+<div class="form-group">
+<label for="email">Email</label>
+<input type = "email" id="email" name="email" placeholder="me@example.com" value="<%= @user.email %>">
+</div> 
+<div class="form-group">
+<label for="avatar_url">Avatar URL</label>
+<input type = "text" id="avatar_url" name="avatar_url" placeholder="http://avatars.com/myavatar.png" value="<%= @user.avatar_url %>">
+</div> 
+<div class="form-group">
+<label for="username">Username</label>
+<input type = "text" id="username" name="username" placeholder="me123456" value="<%= @user.username %>">
+</div>
+<div class="form-group">
+<label for="password">Password</label>
+<input type = "password" id ="password" name="password">
+</div>  
+<div class="form-group">
+<button type="submit">Signup</button>
+</div>
+
+</form>
+
+            <footer style="position: absolute; color: black; bottom:1.0em; text-indent:1.0em;">
+                <ul style="list-style-type: none; margin:1; padding:0;">
+                    <li style="float: left;">About Us</li>
+                    <li style="float: left;">Privacy</li>
+                    <li style="float: left;">Terms</li>
+                    <li style="float: left;">Careers</li>
+                    <li style="float: left;">Contact Us</li>
+                    <li style="float: left;">Language</li>
+                </ul>
+            </footer>
+            <footer style="position: absolute; color: black; right:1.0em; bottom:1.0em; text-indent:1.0em;">
+                <ul style="list-style-type: none; margin:1; padding:0;">
+                    <li style="float: right;">&copy; Copyright 2016 Coffeed <img src="/stylesheets/Coffee.ico" style="width:16px;height:16px;"></img></li>
+                </ul>
+            </footer>

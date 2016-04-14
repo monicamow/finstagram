@@ -5,11 +5,11 @@
 body, input {
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
-  color: #244751;
+  color: #654334;
 }
 
 a {
-  color: #8da7b8;
+  color: antiquewhite;
   text-decoration: none;
 }
 
@@ -21,7 +21,7 @@ label {
 input[type=text], input[type=password], input[type=email] {
   border: solid 1px #244751;
   padding: .5em;
-  width: 200px;
+  width: 300px;
   font-size: 1em;
 }
 
@@ -74,7 +74,7 @@ main {
 }
 
 .user-info h2 {
-  margin: 0 0 0 .5em;
+  margin: 0 0 0 .5em; 
 }
 
 .user-info h3 {
@@ -89,6 +89,7 @@ main {
   display: block;
   width: 100%;
 }
+
 
 .actions {
   display: flex;
@@ -119,3 +120,4 @@ main {
 .new-comment input[type="text"] {
   width: 100%;
 }
+

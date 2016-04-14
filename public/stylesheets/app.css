@@ -1,0 +1,110 @@
+header {
+    background-color: #a16d56;
+    box-sizing: border-box;
+    overflow: hidden;
+    align-items: baseline;
+}
+
+body {
+    background-color: #fbf5ee;
+}
+
+main {
+    background-color: white;
+    padding: 16px;
+}
+
+.post {
+    margin-bottom: 48px;
+}
+
+.post .user-info img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+h1 { 
+    font-family: 'Pacifico', cursive; 
+    color: antiquewhite;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    border-radius: 50%;
+    background-color: #7e5340;
+    background-image: url("http://cdn.onlinewebfonts.com/svg/img_125564.png");
+    background-position: center;
+    height: 40px
+    width: 40px;
+    background-size: 40px 40px;
+    color: antiquewhite;
+    padding: 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    right: 1.0em; 
+    top: 1.0em;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    white-space:nowrap;
+    width: 100%;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    left:auto;
+    right:0;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #654334; /*#3e8e41; */
+}
+
+.thumb { 
+width: 40px;
+height: 40px;
+background-position: center;
+background-size: cover;
+border-radius: 50%;
+transition-property:transform;
+transition-duration:1s,1s;
+}
+
+.user-info img {
+transition-property:transform;
+transition-duration:1s,1s;
+}
+
+.user-info img:hover {
+transform: scale(1.5);
+}
+
+.thumb:hover {
+transform: scale(1.5);
+}
