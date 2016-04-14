@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
     time_ago_in_seconds = Time.now - self.created_at
     time_ago_in_minutes = time_ago_in_seconds / 60
     
-    if time_ago_in_seconds >= 60*24
+    if time_ago_in_minutes >= 60*24
       "#{(time_ago_in_minutes / 60 / 24 ).to_i} days ago"
     elsif time_ago_in_minutes >= 60
       "#{(time_ago_in_minutes / 60).to_i} hours ago" 
