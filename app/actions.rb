@@ -97,6 +97,44 @@ get '/posts/:id' do
   erb(:"posts/show") # render app/views/posts/show.erb
 end
 
+post '/comments' do
+  
+  # point values from params to variables
+  text = params[:text]
+  post_id = params[:post_id]
+  
+  # instantiate a comment with those values and assign the comment to the current_user
+  comment = Comment.new({text: text, post_id: post_id, user_id: current_user.id})
+  
+  # save the comment
+  comment.save
+  
+  # redirect back to wherever we came from -- post '/posts/[:post_id]' or the feed '/'
+  redirect(back)
+
+end
+
+post '/likes' do
+  
+  # point values from params to variables
+  post_id = params[:post_id]
+  
+  # instantiate a comment with those values and assign the comment to the current_user
+  like = Like.new({post_id: post_id, user_id: current_user.id})
+  
+  # save the comment
+  like.save
+  
+  # redirect back to wherever we came from -- post '/posts/[:post_id]' or the feed '/'
+  redirect(back)
+
+end
+
+delete '/likes/:id' do
+  like = Like.find(params[:id])
+  like.destroy
+  redirect(back)
+end
 
 # @post_starbucks = Post.joins(:user).find_by(users: { username: 'starbucks_lover'})
 
